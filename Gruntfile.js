@@ -21,7 +21,7 @@ module.exports = function (grunt) {
       },
       main: {
         src: ['app/client/src/main.js'],
-        dest: 'dist/scripts/main.js',
+        dest: '../crm/ui/scripts/main.js',
         options: {
           debug: grunt.option('configuration') != 'Release'
         }
@@ -52,14 +52,14 @@ module.exports = function (grunt) {
           pretty: grunt.option('configuration') != 'Release'
         },
         files: [
-          { "dist/index.html": ["app/views/index.jade"] },
-          { expand: true, cwd: 'app/views/tpl', src: [ '**/*.jade' ], dest: 'dist/tpl', ext: '.html'}
+          { "../crm/ui/index.php": ["app/views/index.jade"] },
+          { expand: true, cwd: 'app/views/tpl', src: [ '**/*.jade' ], dest: '../crm/ui/tpl', ext: '.html'}
         ]
       }
     },
     stylus: {
       compile: {
-        files: { 'dist/stylesheets/style.css': 'app/public/stylesheets/style.styl' }
+        files: { '../crm/ui/stylesheets/style.css': 'app/public/stylesheets/style.styl' }
       }
     },
     copy: {
@@ -69,7 +69,17 @@ module.exports = function (grunt) {
             expand: true,
             src: ['images/**'],
             cwd: 'app/public',
-            dest: 'dist/'
+            dest: '../crm/ui/'
+          }
+        ]
+      },
+      php: {
+        files: [
+          {
+            expand: true,
+            src: ['php/**'],
+            cwd: 'app/public',
+            dest: '../crm/ui/scripts'
           }
         ]
       },
@@ -79,7 +89,7 @@ module.exports = function (grunt) {
             expand: true,
             src: ['api/**'],
             cwd: 'app/',
-            dest: 'dist/'
+            dest: '../crm/'
           }
         ]
       },
@@ -89,7 +99,7 @@ module.exports = function (grunt) {
             expand: true,
             src: ['bootstrap.min.css'],
             cwd: 'app/client/components/bootstrap/dist/css',
-            dest: 'dist/stylesheets'
+            dest: '../crm/ui/stylesheets'
           }
         ]
       },
@@ -99,7 +109,7 @@ module.exports = function (grunt) {
             expand: true,
             src: ['**'],
             cwd: 'app/client/components/html5-boilerplate/css',
-            dest: 'dist/stylesheets'
+            dest: '../crm/ui/stylesheets'
           }
         ]
       }
