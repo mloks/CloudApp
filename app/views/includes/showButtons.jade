@@ -1,0 +1,13 @@
+div.showButtons.menu
+  ul
+    li
+      button.btn.btn-primary(ng-click='disableFilter("type")', ng-class='{"filterActive": emptyFilter("type")}')
+        | All
+    li
+      button.btn.btn-primary(ng-click='addFilter("type", "active")', ng-class='{"filterActive": checkFilter("type", "active")}')
+        | Used
+    li
+      button.btn.btn-primary(ng-click='addFilter("type", "inactive")', ng-class='{"filterActive": checkFilter("type", "inactive")}')
+        | Unused
+
+

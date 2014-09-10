@@ -1,0 +1,23 @@
+block content
+  div.headContainer
+    a(href="#/") Home
+
+  div.headerControl(ng-controller="HeaderController")
+
+    div.menubar
+      div.welcome
+        p Logged in as
+          span(style="color:green")
+            |  {{ userAccount.userName }}
+
+      div.loginbox
+        button.btn-primary.btn(ng-click="appState.set('search')") Search
+        span &nbsp;
+        button.btn-primary.btn(ng-click="hideHelp = !hideHelp") Help
+        span &nbsp;
+        button#logout.btn-primary.btn(go-click="{{kenobiLogoutUri}}") Logout
+
+    div.alertBox(collapse="hideHelp")
+      div.closebox(ng-click="hideHelp = !hideHelp")
+        span.glyphicon.glyphicon-remove
+      div(ui-view="header", class="helpSection")

@@ -1,0 +1,16 @@
+nav.listPagination(ng-class="{'isUpdating': isUpdating}")
+  span.paginationInformation(ng-show='!isUpdating')
+    | &nbsp;Showing&nbsp;
+    span#startIndex {{ list.page.start | number }}
+    | &nbsp;to&nbsp;
+    span#endIndex {{ list.page.start + list.page.count - 1 | number }}
+    | &nbsp;of&nbsp;
+    span#totalCount {{list.count | number}}
+  button.first.icon-skiprw(ng-click='firstPage()', ng-class="{'btnInactive': !list.page.first}", ng-disabled='!list.page.first')
+    | First
+  button.previous.icon-rw(ng-click='prevPage()', ng-class="{'btnInactive': !list.page.first}", ng-disabled='!list.page.prev')
+    | Previous
+  button.next.icon-ff(ng-click='nextPage()', ng-class="{'btnInactive': !list.page.last}", ng-disabled='!list.page.next')
+    | Next
+  button.last.icon-skipff(ng-click='lastPage()', ng-class="{'btnInactive': !list.page.last}", ng-disabled='!list.page.last')
+    | Last

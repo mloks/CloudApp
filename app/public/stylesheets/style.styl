@@ -1,0 +1,52 @@
+/*  Index
+ *  -----
+ *
+ *  Base Styles
+ *  - Responsive Scale Points
+ *  Typography
+ *  Layout
+ *  Generic Elements
+ *  Dashboard
+ *  Applications
+ *
+ */
+
+/* Base Styles */
+
+html
+  height auto
+
+body
+  font-family: 'Roboto', sans-serif;
+  padding 0
+  font-size 16px /* Base size for EMs  */
+  background-color #f0f0f0
+  height auto
+  // width auto
+  // min-width 768px !important;
+  // max-width: 1600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  &.showFilters
+    #appWrapper
+      background #f2f2f2 /* Fallback style */
+      background -moz-linear-gradient(right, #e0e0e0 0em, #e0e0e0 16.0625em, #c0c0c0 16.25em, #f2f2f2 16.25em)
+      background -webkit-linear-gradient(right, #e0e0e0 0em, #e0e0e0 16.0625em, #c0c0c0 16.25em, #f2f2f2 16.25em)
+      background linear-gradient(to left, #e0e0e0 0em, #e0e0e0 16.0625em, #c0c0c0 16.25em, #f2f2f2 16.25em)
+h2
+  font-size 1.2em
+
+/* Layout */
+#appWrapper
+  position relative
+  height 100%
+
+
+body.showFilters div.container
+  margin-right 16.25em
+
+section.main
+  overflow hidden
+
+/* Import Modules */
+@import 'app'

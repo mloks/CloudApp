@@ -1,0 +1,29 @@
+div.deviceCount(ng-show="metrics.deviceCount")
+  ng-pluralize(count="metrics.deviceCount", when="{'one': '1 device', 'other': '{} devices'}")
+div.deviceCount(ng-show="metrics.usage.deviceCount")
+  ng-pluralize(count="metrics.usage.deviceCount", when="{'one': '1 device', 'other': '{} devices'}")
+
+div.userCount(ng-show="metrics.userCount")
+  ng-pluralize(count="metrics.userCount", when="{'one': '1 user', 'other': '{} users'}")
+div.userCount(ng-show="metrics.usage.userCount")
+  ng-pluralize(count="metrics.usage.userCount", when="{'one': '1 user', 'other': '{} users'}")
+
+div.packageCount(ng-show="metrics.packageCount")
+  ng-pluralize(count="metrics.packageCount", when="{'one': '1 package', 'other': '{} packages'}")
+div.packageCount(ng-show="metrics.usage.packageCount")
+  ng-pluralize(count="metrics.usage.packageCount", when="{'one': '1 package', 'other': '{} packages'}")
+
+div.sessionCount(ng-show="metrics.sessionCount")
+  ng-pluralize(count="metrics.sessionCount", when="{'one': '1 session', 'other': '{} sessions'}")
+div.sessionCount(ng-show="metrics.usage.sessionCount")
+  ng-pluralize(count="metrics.usage.sessionCount", when="{'one': '1 session', 'other': '{} sessions'}")
+
+div.usageTime(ng-show="metrics.usageTime")
+  | {{ metrics.usageTime | usagetime }} of use
+div.usageTime(ng-show="metrics.usage.time")
+  | {{ metrics.usage.time | usagetime }} of use
+
+div.timeInFocus(ng-show="metrics.duration")
+  | {{ metrics.duration | usagetime }} in focus
+div.timeInFocus(ng-show="metrics.focusDuration")
+  | {{ metrics.focusDuration | usagetime }} in focus

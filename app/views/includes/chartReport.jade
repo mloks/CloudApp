@@ -1,0 +1,27 @@
+mixin flotChartReport(chartid,title,caption,controller,model,click, helptext)
+  div(ng-controller=controller)
+    if title
+      div.title1
+        h2= title
+
+    if helptext
+      div.chartSummary
+        h3= helptext
+    //- div(ng-class="{'isLoading': isUpdating}")
+    div.nodata(ng-class="{'isLoading': isUpdating}")
+      aside.nodata(ng-class="(chart.count) ? 'data' : 'nodata'")
+        span.icon-circularinfo
+        | No data returned
+
+
+    div.graph-container.line-chart(ng-class="(chart.count) ? 'graph-placeholder' : 'panel-hide'")
+
+      div.graph-placeholder
+        figure
+          if click != ''
+            chart(id=chartid,ng-model=model,ng-click=click)
+          else
+            chart(id=chartid,ng-model=model)
+          if caption != ''
+            figcaption= caption
+    div#flotTip(style="display: none; position: absolute;")

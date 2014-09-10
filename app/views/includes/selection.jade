@@ -1,0 +1,8 @@
+div#selection.menu
+  ul
+    li
+      button.apply(ng-click='selection.selectAll(list)',ng-disabled='selection.count() == list.page.size')
+        | Select All
+    li
+      button.apply(ng-click='selection.clear()',ng-disabled='selection.count() == 0')
+        | Clear Selection
