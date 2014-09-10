@@ -1,10 +1,5 @@
 *.sw*
 *~
-build/
-bin/
 node_modules/
-vendor/
-crm/node_modules
-crm/app/public
-crm/app/client/components
-crm/dist
+app/public
+app/client/components
