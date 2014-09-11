@@ -1,6 +1,6 @@
 *.sw*
 *~
 node_modules/
-app/public
+app/public/scripts/
 app/client/components
 dist/

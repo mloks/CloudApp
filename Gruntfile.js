@@ -53,7 +53,7 @@ module.exports = function (grunt) {
         },
         files: [
           { "../crm/ui/index.php": ["app/views/index.jade"] },
-          { expand: true, cwd: 'app/views/tpl', src: [ '**/*.jade' ], dest: '../crm/ui/tpl', ext: '.html'}
+          { expand: true, cwd: 'app/views/templates', src: [ '**/*.jade' ], dest: '../crm/ui/views', ext: '.html'}
         ]
       }
     },
@@ -83,16 +83,16 @@ module.exports = function (grunt) {
           }
         ]
       },
-      api: {
-        files: [
-          {
-            expand: true,
-            src: ['api/**'],
-            cwd: 'app/',
-            dest: '../crm/'
-          }
-        ]
-      },
+      // api: {
+      //   files: [
+      //     {
+      //       expand: true,
+      //       src: ['api/**'],
+      //       cwd: 'app/',
+      //       dest: '../crm/'
+      //     }
+      //   ]
+      // },
       bootstrapcss: {
         files: [
           {
