@@ -1,4 +1,14 @@
 div(ng-controller="DashboardController")
+
   div
-    pre
-      | {{result|json}}
+    ul
+      li(ng-repeat='item in result.results', ng-include="'list_item.html'")
+
+script(type="text/ng-template", id="list_item.html")
+
+  div.list
+    div.row
+      div.cell-group
+        div.cell.first {{ item.firstname }}
+        div.cell.second {{ item.lastname }}
+        div.cell.fourth  {{ item.phones.mobile }}

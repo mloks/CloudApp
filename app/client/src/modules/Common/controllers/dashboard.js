@@ -14,4 +14,4 @@ var DashboardController = function($scope, $http) {
 
 DashboardController.$inject = ['$scope', '$http'];
 
-return DashboardController;
+module.exports = DashboardController;
