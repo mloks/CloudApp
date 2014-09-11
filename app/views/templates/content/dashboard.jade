@@ -1,8 +1,28 @@
 div(ng-controller="DashboardController")
 
-  div
-    ul
-      li(ng-repeat='item in result.results', ng-include="'list_item.html'")
+  table
+    thead
+      tr
+        th.entity First Name
+
+        th.entity Last Name
+
+        th.usage Mobile
+
+        th.usage Action
+
+    tbody(ng-repeat='item in result.results')
+      tr.device(ng-class-odd='"odd"', ng-class='{ "isUpdating": member.isUpdating }')
+
+        td.cell.first {{ item.firstname }}
+        td.cell.second {{ item.lastname }}
+        td.cell.fourth  {{ item.phones.mobile }}
+        td.cell.fourth
+          button(ng-click="editIem(item._id)") Edit
+
+  //- div
+  //-   ul
+  //-     li(ng-repeat='item in result.results', ng-include="'list_item.html'")
 
 script(type="text/ng-template", id="list_item.html")
 

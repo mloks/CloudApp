@@ -1,0 +1,21 @@
+div(ng-controller="ListController")
+
+  table
+    thead
+      tr
+        th.entity First Name
+
+        th.entity Last Name
+
+        th.usage Mobile
+
+        th.usage Action
+
+    tbody(ng-repeat='item in result.results')
+      tr.device(ng-class-odd='"odd"', ng-class='{ "isUpdating": member.isUpdating }')
+
+        td.cell.first {{ item.firstname }}
+        td.cell.second {{ item.lastname }}
+        td.cell.fourth  {{ item.phones.mobile }}
+        td.cell.fourth
+          button(ng-click="editIem(item._id)") Edit

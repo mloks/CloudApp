@@ -38,13 +38,11 @@ angular.module('Common', [])
   .constant('FilterMap', require('./constant/FilterMap'))
   .constant('FilterHelp', require('./constant/FilterHelp'))
 
-  .service('MessageService', require('./services/messages'))
-  .service('ValidationService', require('./services/validation'))
-  .service('CollectionService', require('./services/collection'))
+  .service('ApiService', require('./services/api'))
   .service('DataService', require('./services/data'))
 
   .controller('HeaderController', require('./controllers/header'))
-  .controller('DownloadsController', require('./controllers/downloads'))
+  .controller('ListController', require('./controllers/list'))
   .controller('DetailsController', require('./controllers/details'))
   .controller('DashboardController', require('./controllers/dashboard'))
 

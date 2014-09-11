@@ -27,5 +27,16 @@ angular.module('Admin', [])
             }
           }
         })
+        .state('list', {
+          url: "/list",
+          views: {
+            'header': {
+              templateUrl: 'views/help/list.html'
+            },
+            'content': {
+              templateUrl: 'views/content/list.html'
+            }
+          }
+        })
     }
   ]);
