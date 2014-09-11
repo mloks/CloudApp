@@ -46,7 +46,7 @@ angular.module('Common', [])
   .controller('HeaderController', require('./controllers/header'))
   .controller('DownloadsController', require('./controllers/downloads'))
   .controller('DetailsController', require('./controllers/details'))
-  .controller('WorkflowController', require('./controllers/workflow'))
+  .controller('DashboardController', require('./controllers/dashboard'))
 
   .filter('array2string', require('./filters/array2string'))
   .filter('maybeEmpty', require('./filters/maybeEmpty'))

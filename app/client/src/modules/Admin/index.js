@@ -16,5 +16,16 @@ angular.module('Admin', [])
             }
           }
         })
+        .state('dashboard', {
+          url: "/dashboard",
+          views: {
+            'header': {
+              templateUrl: 'views/help/dashboard.html'
+            },
+            'content': {
+              templateUrl: 'views/content/dashboard.html'
+            }
+          }
+        })
     }
   ]);

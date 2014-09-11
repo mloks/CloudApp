@@ -11,6 +11,8 @@ block content
             |  {{ userAccount.userName }}
 
       div.loginbox
+        button.btn-primary.btn(ng-click="appState.set('dashboard')") Dashboard
+        span &nbsp;
         button.btn-primary.btn(ng-click="appState.set('search')") Search
         span &nbsp;
         button.btn-primary.btn(ng-click="hideHelp = !hideHelp") Help
