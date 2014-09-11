@@ -1,4 +1,4 @@
-var HeaderController = function($scope, $modal, MessageService) {
+var HeaderController = function($scope, $modal) {
 
   $scope.hideAlert = true;
   $scope.hideHelp = true;
@@ -9,21 +9,6 @@ var HeaderController = function($scope, $modal, MessageService) {
     $scope.cancel = function () {
       $modalInstance.dismiss('cancel');
     };
-  };
-
-  $scope.msgCollection = function(){
-    return MessageService.getMessages();
-  };
-
-  $scope.countObjects = function() {
-    return MessageService.countMessages();
-  };
-
-  $scope.alertRemove = function(alertKey) {
-    MessageService.deleteMessage(alertKey);
-    if(MessageService.countMessages() == 0){
-      $scope.hideAlert = true;
-    }
   };
 
   $scope.openDashboard = function (size) {
@@ -41,6 +26,6 @@ var HeaderController = function($scope, $modal, MessageService) {
 
 };
 
-HeaderController.$inject = ['$scope', '$modal', 'MessageService'];
+HeaderController.$inject = ['$scope', '$modal'];
 
 module.exports = HeaderController;
