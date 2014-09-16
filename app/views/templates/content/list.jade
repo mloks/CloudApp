@@ -16,6 +16,8 @@ div(ng-controller="ListController")
 
         td.cell.first {{ item.firstname }}
         td.cell.second {{ item.lastname }}
-        td.cell.fourth  {{ item.phones.mobile }}
+        td.cell.fourth  {{ item.phones.mobile }} / {{ item._id }}
         td.cell.fourth
           button(ng-click="editIem(item._id)") Edit
+          | &nbsp;
+          button(ng-click="deleteItem(item._id)") Delete

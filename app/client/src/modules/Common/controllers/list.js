@@ -4,7 +4,7 @@ var ListController = function($scope, ApiService) {
   $scope.isUpdating = true;
 
   var getList = function(){
-    ApiService.sendApiRequest('get', '/api/crm/list', {}).then(
+    ApiService.sendApiRequest('get', '/api/entity/contact', {}).then(
       function (response) {
         $scope.result = response.data;
         $scope.isUpdating = false;
@@ -12,7 +12,18 @@ var ListController = function($scope, ApiService) {
     );
   };
 
- getList();
+  $scope.deleteItem = function(id){
+    console.log('UPDATE REQUEST FOR ', id);
+    var myUpdate = { 'hello': "hallo"};
+    ApiService.sendApiRequest('put', '/api/entity/contact/' + id, myUpdate).then(
+      function (response) {
+        $scope.result = response.data;
+        $scope.isUpdating = false;
+      }
+    );
+  };
+
+  getList();
 
 };
 
