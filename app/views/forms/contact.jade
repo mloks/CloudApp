@@ -1,16 +1,13 @@
-ul.group
-  h4 Contact
-  li
-    input#firstName(type='text', ng-model='contact.firstName', placeholder=' First name', ng-maxlength='50')
+form.form-horizontal.form-group-sm
+  .row
+    .col-xs-2
+      label.col-sm-2.control-label(for="firstName") First name
+      input#firstName.form-control.input-sm(type='text', ng-model='contact.firstName', placeholder=' Last name')
+    .col-xs-3
+      label.control-label(for="middleName") Middle name
+      input#middleName.form-control.input-sm(type='text', ng-model='contact.middleName', placeholder=' Middle name')
+    .col-xs-4
+      label.control-label(for="lastName") Last name
+      input#lastName.form-control.input-sm(type='text', ng-model='contact.lastName', placeholder=' Last name')
 
-  li
-    input#middleName(type='text', ng-model='contact.middleName', placeholder=' Middle name', ng-maxlength='50')
-
-  li
-    input#lastName(type='text', ng-model='contact.lastName', placeholder=' Last name', ng-maxlength='50')
-
-  li
-    input#companyName(type='text', ng-model='contact.companyName', placeholder=' Company name', ng-maxlength='50')
-
-  li
-    input#jobTitle(type='text', ng-model='contact.jobTitle', placeholder=' Job title', ng-maxlength='50')
+  button.btn.btn-default.btn-sm Submit
