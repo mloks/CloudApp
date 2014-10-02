@@ -1,7 +1,6 @@
 require('../components/angular/angular');
 require('../components/angular-ui-router/release/angular-ui-router');
 require('../components/angular-bootstrap/ui-bootstrap-tpls');
-require('../components/ng-table/ng-table');
 require('./modules/Common');
 require('./modules/Admin');
 require('./modules/Search');
@@ -23,6 +22,6 @@ var main = function ($rootScope, $state) {
 main.$inject = ['$rootScope', '$state'];
 
 angular
-  .module('main', ['ui.router', 'ui.bootstrap', 'ngTable', 'Common', 'Admin', 'Search'])
+  .module('main', ['ui.router', 'ui.bootstrap', 'Common', 'Admin', 'Search'])
   .run(['$state', '$rootScope', function ($state, $rootScope) { $state.transitionTo('home'); }])
   .run(main);

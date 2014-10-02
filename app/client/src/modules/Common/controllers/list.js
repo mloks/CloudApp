@@ -12,10 +12,10 @@ var ListController = function($scope, ApiService) {
     );
   };
 
-  $scope.deleteItem = function(id){
+  $scope.createItem = function(id){
     console.log('UPDATE REQUEST FOR ', id);
     var myUpdate = { 'hello': "hallo"};
-    ApiService.sendApiRequest('put', '/api/entity/contact/' + id, myUpdate).then(
+    ApiService.sendApiRequest('post', '/api/entity/contact/' + id, myUpdate).then(
       function (response) {
         $scope.result = response.data;
         $scope.isUpdating = false;
