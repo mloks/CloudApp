@@ -18,9 +18,9 @@ div(ng-controller="ListController")
         td.cell.second {{ item.lastname }}
         td.cell.fourth  {{ item.phones.mobile }} / {{ item._id }}
         td.cell.fourth
-          button(ng-click="editIem(item._id)") Edit
+          button(ng-click="openContact(item._id)") Edit
           | &nbsp;
-          button(ng-click="deleteItem(item._id)") Delete
+          button(ng-click="openContact(item._id)") Delete
 
   div
     include ../../forms/contact
