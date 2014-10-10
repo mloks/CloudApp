@@ -58,7 +58,7 @@ function _list($db, $collection){
 
 function _create($db, $collection){
 
-  $document = json_decode(Slim::getInstance()->request()->getBody(), true);
+  $document = json_decode(\Slim\Slim::getInstance()->request()->getBody(), true);
 
   $data = mongoCreate(
     MONGO_HOST,
@@ -90,7 +90,7 @@ function _read($db, $collection, $id){
 
 function _update($db, $collection, $id){
 
-  $document = json_decode(Slim::getInstance()->request()->getBody(), true);
+  $document = json_decode(\Slim\Slim::getInstance()->request()->getBody(), true);
 
   $data = mongoUpdate(
     MONGO_HOST,

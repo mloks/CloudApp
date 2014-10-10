@@ -14,7 +14,9 @@ var ContactController = function($scope, $modalInstance, ApiService, id) {
   };
 
   var saveItem = function(itemId, item){
-    ApiService.sendApiRequest('post', '/api/entity/contact/' + itemId, item).then(
+    delete item._id;
+    var jsonItem = angular.toJson(item);
+    ApiService.sendApiRequest('post', '/api/entity/contact', jsonItem).then(
       function (response) {
         $scope.message = 'Record saved';
         $scope.isUpdating = false;
