@@ -1,6 +1,7 @@
 .modal-header
-  h1 Contact Entity
+  h1 Contact profile
 .modal-body
-  include ../../forms/contact
+  include ../../forms/contact_vertical
 .modal-footer
-  h2 Footer
+  button.btn.btn-primary(ng-click="ok()") Update
+  button.btn.btn-warning(ng-click="cancel()") Cancel

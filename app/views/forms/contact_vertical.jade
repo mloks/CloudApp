@@ -1,0 +1,66 @@
+form.form-horizontal
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="firstName") First Name
+    div.col-xs-8
+      input#firstName.form-control.input-sm(type='text', ng-model='contact.firstName', placeholder=' Last name')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="middleName") Middle name
+    div.col-xs-8
+      input#middleName.form-control.input-sm(type='text', ng-model='contact.middleName', placeholder=' Middle name')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="lastName") Last name
+    div.col-xs-8
+      input#lastName.form-control.input-sm(type='text', ng-model='contact.lastName', placeholder=' Last name')
+
+  hr
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="companyName") Company name
+    div.col-xs-8
+      input#companyName.form-control.input-sm(type='text', ng-model='contact.companyName', placeholder=' Company name')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="jobTitle") Job title
+    div.col-xs-8
+      input#jobTitle.form-control.input-sm(type='text', ng-model='contact.jobTitle', placeholder=' Job Title')
+
+  hr
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="phoneNumber") Phone number
+    div.col-xs-8
+      input#phoneNumber.form-control.input-sm(type='text', ng-model='contact.phoneNumber', placeholder=' Phone number')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="phoneMobile") Mobile
+    div.col-xs-8
+      input#phoneMobile.form-control.input-sm(type='text', ng-model='contact.phoneMobile', placeholder=' Phone mobile')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="emailAddress") Email address
+    div.col-xs-8
+      input#emailAddress.form-control.input-sm(type='text', ng-model='contact.emailAddress', placeholder=' Email Address')
+
+  hr
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="addressLine1") Address
+    div.col-xs-8
+      input#addressLine1.form-control.input-sm(type='text', ng-model='contact.address.line1', placeholder=' Address line 1')
+      input#addressLine2.form-control.input-sm(type='text', ng-model='contact.address.line2', placeholder=' Address line 2')
+      input#addressLine3.form-control.input-sm(type='text', ng-model='contact.address.line2', placeholder=' Address line 3')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="addressCity") City/Postcode
+    div.col-xs-5
+      input#addressCity.form-control.input-sm(type='text', ng-model='contact.address.city', placeholder=' City')
+    div.col-xs-3
+      input#addressPostcode.form-control.input-sm(type='text', ng-model='contact.address.postcode', placeholder=' Postcode')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="addressCountry") Country
+    div.col-xs-8
+      input#addressCountry.form-control.input-sm(type='text', ng-model='contact.address.country', placeholder=' Country')
