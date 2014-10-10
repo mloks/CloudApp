@@ -11,7 +11,9 @@ require 'Slim/Slim.php';
 require 'mongo/crud.php';
 require 'mongo/list.php';
 require 'mongo/command.php';
-define('MONGO_HOST', $_SERVER['OPENSHIFT_MONGODB_DB_URL']);
+// define('MONGO_HOST', $_SERVER['OPENSHIFT_MONGODB_DB_URL']);
+define('MONGO_HOST', '');
+
 
 \Slim\Slim::registerAutoloader();
 

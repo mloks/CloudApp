@@ -1,13 +1,56 @@
 form.form-horizontal.form-group-sm
   .row
     .col-xs-2
-      label.col-sm-2.control-label(for="firstName") First name
+      label.control-label.my-label(for="firstName") First name
       input#firstName.form-control.input-sm(type='text', ng-model='contact.firstName', placeholder=' Last name')
-    .col-xs-3
-      label.control-label(for="middleName") Middle name
+    .col-xs-2
+      label.control-label.my-label(for="middleName") Middle name
       input#middleName.form-control.input-sm(type='text', ng-model='contact.middleName', placeholder=' Middle name')
     .col-xs-4
-      label.control-label(for="lastName") Last name
+      label.control-label.my-label(for="lastName") Last name
       input#lastName.form-control.input-sm(type='text', ng-model='contact.lastName', placeholder=' Last name')
 
-  button.btn.btn-default.btn-sm Submit
+  .row
+    .col-xs-4
+      label.control-label.my-label(for="companyName") Company name
+      input#companyName.form-control.input-sm(type='text', ng-model='contact.companyName', placeholder=' Company name')
+    .col-xs-4
+      label.control-label.my-label(for="jobTitle") Job Title
+      input#jobTitle.form-control.input-sm(type='text', ng-model='contact.jobTitle', placeholder=' Job Title')
+
+  .row
+    .col-xs-2
+      label.control-label.my-label(for="phoneNumber") Phone number
+      input#phoneNumber.form-control.input-sm(type='text', ng-model='contact.phoneNumber', placeholder=' Phone number')
+    .col-xs-2
+      label.control-label.my-label(for="phoneMobile") Mobile
+      input#phoneMobile.form-control.input-sm(type='text', ng-model='contact.phoneMobile', placeholder=' Phone mobile')
+    .col-xs-4
+      label.control-label.my-label(for="emailAddress") Email Address
+      input#emailAddress.form-control.input-sm(type='text', ng-model='contact.emailAddress', placeholder=' Email Address')
+
+  .row
+    .col-xs-3
+      label.control-label.my-label(for="addressLine1") Address line 1
+      input#addressLine1.form-control.input-sm(type='text', ng-model='contact.address.line1', placeholder=' Address line 1')
+    .col-xs-3
+      label.control-label.my-label(for="addressLine2") Address line 2
+      input#addressLine2.form-control.input-sm(type='text', ng-model='contact.address.line2', placeholder=' Address line 2')
+    .col-xs-2
+      label.control-label.my-label(for="addressLine3") Address line 3
+      input#addressLine3.form-control.input-sm(type='text', ng-model='contact.address.line2', placeholder=' Address line 3')
+
+  .row
+    .col-xs-3
+      label.control-label.my-label(for="addressCity") City
+      input#addressCity.form-control.input-sm(type='text', ng-model='contact.address.city', placeholder=' City')
+    .col-xs-2
+      label.control-label.my-label(for="addressPostcode") Postcode
+      input#addressPostcode.form-control.input-sm(type='text', ng-model='contact.address.postcode', placeholder=' Postcode')
+    .col-xs-3
+      label.control-label.my-label(for="addressCountry") Country
+      input#addressCountry.form-control.input-sm(type='text', ng-model='contact.address.line2', placeholder=' Country')
+
+  hr
+
+  button.btn.btn-primary Submit

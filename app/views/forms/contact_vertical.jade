@@ -1,0 +1,73 @@
+form.form-horizontal
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="firstname") Title/First
+    div.col-xs-2
+      input#title.form-control.input-sm(type='text', ng-model='entity.person.title', placeholder=' Title')
+    div.col-xs-6
+      input#firstname.form-control.input-sm(type='text', ng-model='entity.person.firstname', placeholder=' First name')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="middlename") Middle name
+    div.col-xs-8
+      input#middlename.form-control.input-sm(type='text', ng-model='entity.person.middlename', placeholder=' Middle name')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="lastname") Last name
+    div.col-xs-8
+      input#lastname.form-control.input-sm(type='text', ng-model='entity.person.lastname', placeholder=' Last name')
+
+  hr
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="jobtitle") Job title
+    div.col-xs-8
+      input#jobtitle.form-control.input-sm(type='text', ng-model='entity.person.jobtitle', placeholder=' Job Title')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="companyname") Company name
+    div.col-xs-8
+      input#companyname.form-control.input-sm(type='text', ng-model='entity.company.name', placeholder=' Company name')
+
+  hr
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="primaryphone") Primary phone
+    div.col-xs-8
+      input#primaryphone.form-control.input-sm(type='text', ng-model='entity.phone.primary', placeholder=' Phone number')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="mobilephone") Mobile phone
+    div.col-xs-8
+      input#mobilephone.form-control.input-sm(type='text', ng-model='entity.phone.mobile', placeholder=' Phone mobile')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="primaryemail") Primary email
+    div.col-xs-8
+      input#primaryemail.form-control.input-sm(type='text', ng-model='entity.email.primary', placeholder=' Primary email address')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="otheremail") Other email
+    div.col-xs-8
+      input#otheremail.form-control.input-sm(type='text', ng-model='entity.email.other', placeholder=' Other email address')
+
+  hr
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="addressLine1") Address
+    div.col-xs-8
+      input#addressLine1.form-control.input-sm(type='text', ng-model='entity.address.line1', placeholder=' Address line 1')
+      input#addressLine2.form-control.input-sm(type='text', ng-model='entity.address.line2', placeholder=' Address line 2')
+      input#addressLine3.form-control.input-sm(type='text', ng-model='entity.address.line2', placeholder=' Address line 3')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="addressCity") City/Postcode
+    div.col-xs-5
+      input#addressCity.form-control.input-sm(type='text', ng-model='entity.address.city', placeholder=' City')
+    div.col-xs-3
+      input#addressPostcode.form-control.input-sm(type='text', ng-model='entity.address.postcode', placeholder=' Postcode')
+
+  div.form-group.form-group-xs
+    label.col-xs-3.control-label(for="addressCountry") Country
+    div.col-xs-8
+      input#addressCountry.form-control.input-sm(type='text', ng-model='entity.address.country', placeholder=' Country')

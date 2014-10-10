@@ -1,0 +1,9 @@
+.modal-header
+  h1 Contact profile
+  hr
+  pre {{ entity | json }}
+.modal-body
+  include ../../forms/contact_vertical
+.modal-footer
+  button.btn.btn-primary(ng-click="save()") Save
+  button.btn.btn-warning(ng-click="cancel()") Cancel

@@ -83,16 +83,16 @@ module.exports = function (grunt) {
           }
         ]
       },
-      // api: {
-      //   files: [
-      //     {
-      //       expand: true,
-      //       src: ['api/**'],
-      //       cwd: 'app/',
-      //       dest: '../crm/'
-      //     }
-      //   ]
-      // },
+      api: {
+        files: [
+          {
+            expand: true,
+            src: ['api/**'],
+            cwd: 'app/',
+            dest: '../crm/'
+          }
+        ]
+      },
       bootstrapcss: {
         files: [
           {
