@@ -14,14 +14,23 @@ var ContactController = function($scope, $modalInstance, ApiService, id) {
   };
 
   var saveItem = function(itemId, item){
-    delete item._id;
     var jsonItem = angular.toJson(item);
-    ApiService.sendApiRequest('post', '/api/entity/contact', jsonItem).then(
-      function (response) {
-        $scope.message = 'Record saved';
-        $scope.isUpdating = false;
-      }
-    );
+    if(angular.isUndefined(itemId)) {
+      ApiService.sendApiRequest('post', '/api/entity/contact', jsonItem).then(
+        function (response) {
+          $scope.message = 'Record saved';
+          $scope.isUpdating = false;
+        }
+      );
+    }
+    else if(angular.isDefined(itemId)) {
+      ApiService.sendApiRequest('put', '/api/entity/contact/' + itemId , jsonItem).then(
+        function (response) {
+          $scope.message = 'Record updated';
+          $scope.isUpdating = false;
+        }
+      );
+    }
   };
 
   $scope.cancel = function(){

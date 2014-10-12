@@ -12,15 +12,12 @@ div(ng-controller="ListController")
         th.usage Action
 
     tbody(ng-repeat='item in result.results')
-      tr.device(ng-class-odd='"odd"', ng-class='{ "isUpdating": member.isUpdating }')
+      tr.device(ng-class-odd='"odd"', ng-class='{ "isUpdating": item.isUpdating }')
 
-        td.cell.first {{ item.firstname }}
-        td.cell.second {{ item.lastname }}
-        td.cell.fourth  {{ item.phones.mobile }} / {{ item._id }}
+        td.cell.first {{ item.person.firstname }}
+        td.cell.second {{ item.person.lastname }}
+        td.cell.fourth  {{ item.phone.mobile }}
         td.cell.fourth
           button(ng-click="openContact(item._id)") Edit
           | &nbsp;
           button(ng-click="openContact(item._id)") Delete
-
-  div
-    include ../../forms/contact
