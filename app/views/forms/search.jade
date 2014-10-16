@@ -1,0 +1,24 @@
+form.form-horizontal.form-group-sm
+  .row
+    .col-xs-2
+      label.control-label.my-label(for="firstName") First name
+      input#firstName.form-control.input-sm(type='text', ng-model='search.filter.firstName', placeholder=' Last name')
+    .col-xs-3
+      label.control-label.my-label(for="lastName") Last name
+      input#lastName.form-control.input-sm(type='text', ng-model='search.filter.lastName', placeholder=' Last name')
+    .col-xs-3
+      label.control-label.my-label(for="companyName") Company name
+      input#companyName.form-control.input-sm(type='text', ng-model='search.filter.companyName', placeholder=' Company name')
+
+  .row
+    .col-xs-3
+      label.control-label.my-label(for="emailAddress") Email Address
+      input#emailAddress.form-control.input-sm(type='text', ng-model='search.filter.emailAddress', placeholder=' Email Address')
+    .col-xs-2
+      label.control-label.my-label(for="addressCity") City
+      input#addressCity.form-control.input-sm(type='text', ng-model='search.filter.addressCity', placeholder=' City')
+    .col-xs-3
+      label.control-label.my-label(for="addressCountry") Country
+      input#addressCountry.form-control.input-sm(type='text', ng-model='search.filter.addressCountry', placeholder=' Country')
+    .col-xs-3
+      button.btn.btn-primary(ng-click="appState.set('list')") Search

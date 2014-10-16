@@ -9,6 +9,11 @@ require('./modules/Entity');
 
 var main = function ($rootScope, $state, $modal) {
 
+  $rootScope.search = {
+    filter: {},
+    hide: true
+  };
+
   $rootScope.userAccount ={
     authenticated: true
   };

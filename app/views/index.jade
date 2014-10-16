@@ -19,7 +19,23 @@ html(lang="en", ng-app="main", class="no-js")
         span.isLoading
 
       div#appWrapper(ng-switch-when="true")
-        div(class='container all')
-          div.dev
-            include header/index
+
+        div
+          hr
+          div.menubar
+            ul.nav
+              li
+                button.btn-primary.btn(ng-click="appState.set('home')") Home
+              li
+                button.btn-primary.btn(ng-click="search.hide = !search.hide") Search
+              li
+                button.btn-warning.btn(ng-click="openContact()") Add contact
+              li
+                button#logout.btn-primary.btn(go-click="{{kenobiLogoutUri}}") Logout
+
+          hr
+          div.alertBox(collapse="search.hide")
+            include forms/search
+
+          hr
           div(ui-view="content", class="contentSection")

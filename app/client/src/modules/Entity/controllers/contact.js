@@ -57,13 +57,13 @@ var ContactController = function($scope, $modalInstance, ApiService, id) {
     else if(angular.isUndefined($scope.itemId)) {
       addItem($scope.entity);
     }
-    // $modalInstance.close();
+    $modalInstance.close();
   };
 
   $scope.deleteEntity = function(){
     $scope.entity.status = "Delete";
     updateItem($scope.entity);
-    // $modalInstance.close();
+    $modalInstance.close();
   };
 
   if(angular.isDefined($scope.itemId)) {
